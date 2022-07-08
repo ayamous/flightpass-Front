@@ -1,0 +1,1644 @@
+@import "./variable";
+
+.segmentDescription {
+  background-color: white;
+  padding-bottom: 15px;
+  h4.title {
+    position: relative;
+  }
+  h4 {
+    margin-left: 8px;
+    font-family: $font-sora;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .options {
+    position: relative;
+    background: rgb(188 188 188 / 20%);
+
+    padding-bottom: 15px;
+    .circularProgress {
+      position: absolute;
+      z-index: 1001;
+      top: 50%;
+      left: 45%;
+    }
+    .load {
+      opacity: 0.4;
+    }
+    .title {
+      border-radius: 8px 8px 0px 0px;
+      background: #606060;
+      color: white;
+      font-family: $font-sora;
+      position: relative;
+      display: flex;
+      align-items: center;
+      img {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+
+      h4 {
+        font-weight: 400;
+        position: relative;
+        top: 8px;
+      }
+    }
+
+    .options-fixes {
+      .label {
+        margin-top: 21px;
+        font-family: $font-sora;
+        .main {
+          color: #cf2547;
+        }
+        .secondary {
+          color: #666;
+        }
+      }
+      .segment-container {
+        .cust-select {
+          .select-container {
+            position: relative;
+            height: max-content;
+            .value {
+              background-color: #cf0a3d;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              font-family: $font-museo;
+              position: relative;
+              text-align: center;
+              border-radius: 8px;
+              color: white;
+              i.arrow {
+                position: relative;
+                right: 1%;
+                svg {
+                }
+              }
+              span {
+                width: 100%;
+              }
+              button {
+                background-color: transparent;
+                border: none;
+                .icon-down {
+                  color: white;
+                }
+              }
+            }
+            .items {
+              position: absolute;
+              z-index: 1001;
+              top: 106%;
+              background-color: #cf0a3d;
+              border: 1px solid #000000c2;
+              max-height: 200px;
+              overflow-y: scroll;
+              transition: all 0.25s ease-in-out;
+              -webkit-transition: all 0.25s ease-in-out;
+              -moz-transition: all 0.25s ease-in-out;
+              -o-transition: all 0.25s ease-in-out;
+              transition: all 0.25s ease-in-out;
+              font-family: $font-museo;
+              border-radius: 5px;
+              color: white;
+              ul {
+                list-style: none;
+                text-align: start;
+                padding: 0px;
+                margin: 0px;
+                li {
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  border-bottom: 1px solid #aaa;
+                  padding-bottom: 6px;
+                  padding-top: 6px;
+                  i.arrow {
+                    position: relative;
+                    svg {
+                    }
+                  }
+                  span {
+                    width: 100%;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+            .items.closed {
+              -webkit-transition: all 0.25s ease-in-out;
+              -moz-transition: all 0.25s ease-in-out;
+              -o-transition: all 0.25s ease-in-out;
+              transition: all 0.25s ease-in-out;
+              opacity: 0;
+              padding: 0;
+              display: none;
+            }
+          }
+        }
+        svg.line {
+          width: 95%;
+          display: block;
+          margin: auto;
+        }
+
+        .trajet-btn {
+          i {
+            color: #cf013e;
+          }
+          span {
+            color: black;
+            font-family: $font-sora;
+            font-weight: 600;
+            position: relative;
+          }
+        }
+        .text-secondary {
+          font-family: $font-sora;
+          font-weight: 600;
+          span {
+          }
+          span {
+            color: black;
+            position: relative;
+          }
+        }
+      }
+    }
+    .options-to-choose {
+      position: relative;
+      font-family: $font-sora;
+      .label {
+        .main {
+          font-weight: 600;
+          color: #cf2547;
+        }
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          font-family: $font-sora;
+          color: #000;
+          font-weight: 600;
+
+          i {
+            color: #cb952b;
+          }
+        }
+      }
+    }
+
+    .price {
+      margin-top: 15px;
+      display: flex;
+      button {
+        background-color: #cf2547;
+        color: white;
+        font-family: $font-museo;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .base-price {
+        color: #d00b41;
+      }
+
+      .base-price::before {
+        content: "À partir de";
+        color: black;
+        position: absolute;
+      }
+    }
+  }
+  .map {
+    height: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  @media screen and (max-width: 250px) {
+    padding-left: 3px;
+    padding-right: 3px;
+    h4 {
+      font-size: 15px;
+    }
+    .options {
+      .title {
+        h4 {
+          font-size: 17px;
+        }
+
+        img {
+          width: 70px;
+        }
+      }
+
+      .options-fixes {
+        .label {
+          padding-left: 3px;
+          margin-bottom: 8px;
+
+          .main {
+            font-size: 14px;
+          }
+
+          .secondary {
+            font-size: 14px;
+          }
+        }
+
+        .segment-container {
+          padding-left: 4px;
+          padding-right: 4px;
+
+          .segment {
+            margin-bottom: 15px;
+
+            .arrow {
+              font-size: 20px;
+            }
+
+            .air-port {
+              padding: 4px;
+              border-radius: 4px;
+              span {
+                font-size: 11px;
+              }
+            }
+          }
+
+          .text-secondary {
+            font-size: 12px;
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      .options-to-choose {
+        .label {
+          .main {
+            font-size: 14px;
+          }
+        }
+
+        ul {
+          padding: 4px;
+
+          li {
+            margin-top: 4px;
+            font-size: 12px;
+
+            i {
+              margin-right: 2px;
+              position: relative;
+              bottom: 0.5px;
+            }
+          }
+        }
+      }
+
+      .price {
+        padding-left: 7px;
+        padding-right: 7px;
+
+        button {
+          padding: 5px 10px 5px 10px;
+          font-size: 14px;
+        }
+
+        .base-price {
+          font-size: 20px;
+        }
+
+        .base-price::before {
+          font-size: 11.5px;
+          bottom: 26px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 250px) and (max-width: 300px) {
+    padding-left: 10px;
+    padding-right: 10px;
+    h4.title {
+      right: 53px;
+      font-size: 25px;
+      margin-bottom: 27px;
+    }
+    .options {
+      .title {
+        padding: 14px 5px 14px 9px;
+        h4 {
+          font-size: 19px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        img {
+          width: 24%;
+        }
+      }
+      .options-fixes {
+        padding-left: 5px;
+        .label {
+          padding-left: 3px;
+          margin-bottom: 8px;
+          .main {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+          }
+          .secondary {
+            font-size: 16px;
+          }
+        }
+        .segment-container {
+          padding-left: 4px;
+          padding-right: 4px;
+          .segment {
+            margin-bottom: 8px;
+            .arrow {
+              svg {
+                width: 25px;
+                margin-left: 8px;
+                margin-right: 8px;
+              }
+            }
+            .air-port {
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              .air-plan {
+                svg {
+                  width: 27px;
+                  position: relative;
+                  right: 12px;
+                }
+              }
+              span {
+                font-size: 12px;
+                font-weight: 600;
+              }
+              .icon-down {
+                position: relative;
+                left: 12px;
+              }
+            }
+            .air-port-list {
+              .cust-select {
+                .select-container {
+                  .value {
+                    .icon-label {
+                      svg {
+                        width: 26px;
+                      }
+                    }
+                    .label {
+                      font-size: 12px;
+                      bottom: 6px;
+                      font-weight: 600;
+                    }
+                    .icon-down {
+                    }
+                  }
+                  .items {
+                    top: 115%;
+                    ul {
+                      li {
+                        font-size: 12px;
+                      }
+                    }
+                  }
+                  .items.closed {
+                  }
+                }
+              }
+            }
+          }
+          .text-secondary {
+            font-size: 13px;
+            margin-top: 17px;
+            margin-left: 11px;
+          }
+        }
+      }
+      .options-to-choose {
+        position: relative;
+        padding-left: 5px;
+        margin-top: 21px;
+        .label {
+          .main {
+            font-size: 16px;
+          }
+        }
+        ul {
+          padding: 4px;
+          li {
+            margin-top: 10px;
+            font-size: 12px;
+
+            i {
+              margin-right: 2px;
+              position: relative;
+              bottom: 0.5px;
+            }
+          }
+        }
+        .price {
+          margin-top: 15px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          button {
+            padding: 8px 25px 8px 25px;
+            font-size: 15px;
+            font-weight: 600;
+          }
+          .base-price {
+            font-size: 22px;
+            font-weight: 600;
+          }
+
+          .base-price::before {
+            font-size: 13.5px;
+            top: -19px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 300px) and (max-width: 430px) {
+    padding-left: 5px;
+    padding-right: 5px;
+    h4.title {
+      right: 53px;
+      font-size: 25px;
+      margin-bottom: 27px;
+    }
+    .options {
+      .title {
+        padding: 14px 5px 14px 9px;
+        h4 {
+          font-size: 19px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        img {
+          width: 31%;
+        }
+      }
+      .options-fixes {
+        padding-left: 5px;
+        .label {
+          padding-left: 3px;
+          margin-bottom: 8px;
+          .main {
+            font-size: 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+          }
+          .secondary {
+            font-size: 16px;
+          }
+        }
+        .segment-container {
+          .cust-select {
+            .select-container {
+              .value {
+                padding: 10px 5px;
+                width: 90%;
+                left: 5%;
+                i.arrow {
+                  svg {
+                    width: 24px;
+                  }
+                }
+                span {
+                  font-size: 4vw;
+                  font-weight: 600;
+                }
+                button {
+                  .icon-down {
+                  }
+                }
+              }
+              .items {
+                width: 90%;
+                left: 5%;
+                top: 106%;
+                ul {
+                  li {
+                    padding-bottom: 6px;
+                    padding-top: 6px;
+                    i.arrow {
+                      svg {
+                        width: 1.8vmax;
+                      }
+                    }
+                    span {
+                      width: 100%;
+                      font-size: 4vw;
+                      font-weight: 500;
+                    }
+                  }
+                }
+              }
+              .items.closed {
+              }
+            }
+          }
+
+          .trajet-btn {
+            i {
+              font-size: 24px;
+            }
+            span {
+              font-size: 14px;
+              font-weight: 600;
+              top: 5px;
+              left: 12px;
+            }
+          }
+          .text-secondary {
+            font-size: 13px;
+            margin-top: 17px;
+            margin-left: 11px;
+          }
+        }
+      }
+      .options-to-choose {
+        position: relative;
+        padding-left: 5px;
+        margin-top: 21px;
+        .label {
+          .main {
+            font-size: 16px;
+          }
+        }
+        ul {
+          padding: 4px;
+          li {
+            margin-top: 10px;
+            font-size: 12px;
+
+            i {
+              margin-right: 2px;
+              position: relative;
+              bottom: 0.5px;
+            }
+          }
+        }
+        .price {
+          margin-top: 22px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          button {
+            padding: 8px 25px 8px 25px;
+            font-size: 15px;
+            font-weight: 600;
+          }
+          .base-price {
+            font-size: 22px;
+            font-weight: 600;
+          }
+
+          .base-price::before {
+            font-size: 13.5px;
+            top: -13px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 430px) and (max-width: 568px) {
+    padding-left: 5px;
+    padding-right: 5px;
+    h4.title {
+      right: 53px;
+      font-size: 25px;
+      margin-bottom: 27px;
+    }
+    .options {
+      .title {
+        padding: 14px 5px 14px 9px;
+        h4 {
+          font-size: 24px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        img {
+          width: 24%;
+        }
+      }
+      .options-fixes {
+        padding-left: 5px;
+        .label {
+          padding-left: 3px;
+          margin-bottom: 8px;
+          .main {
+            font-size: 19px;
+            margin-bottom: 8px;
+            font-weight: 600;
+          }
+          .secondary {
+            font-size: 19px;
+          }
+        }
+        .segment-container {
+          padding-left: 4px;
+          padding-right: 4px;
+          .segment {
+            .arrow {
+              svg {
+                width: 25px;
+                margin-left: 8px;
+                margin-right: 8px;
+              }
+            }
+            .air-port {
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              .air-plan {
+                svg {
+                  width: 35px;
+                  position: relative;
+                  right: 12px;
+                }
+              }
+              span {
+                font-size: 16px;
+                font-weight: 600;
+              }
+              .icon-down {
+                position: relative;
+                left: 12px;
+              }
+            }
+            .air-port-list {
+              .cust-select {
+                .select-container {
+                  .value {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    .icon-label {
+                      svg {
+                        width: 40px;
+                      }
+                    }
+                    .label {
+                      font-size: 16px;
+                      bottom: 6px;
+                      font-weight: 600;
+                    }
+                    .icon-down {
+                    }
+                  }
+                  .items {
+                    top: 115%;
+                    ul {
+                      li {
+                        font-size: 16px;
+                      }
+                    }
+                  }
+                  .items.closed {
+                  }
+                }
+              }
+            }
+          }
+          .trajet-btn {
+            i {
+              font-size: 30px;
+            }
+            span {
+              font-size: 16px;
+              font-weight: 600;
+              top: 5px;
+              left: 12px;
+            }
+          }
+          .text-secondary {
+            font-size: 16px;
+            margin-top: 17px;
+            margin-left: 11px;
+          }
+        }
+      }
+      .options-to-choose {
+        position: relative;
+        padding-left: 5px;
+        margin-top: 21px;
+        .label {
+          .main {
+            font-size: 19px;
+          }
+        }
+        ul {
+          padding: 4px;
+          li {
+            margin-top: 10px;
+            font-size: 14px;
+
+            i {
+              margin-right: 2px;
+              position: relative;
+              bottom: 0.5px;
+            }
+          }
+        }
+        .price {
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          button {
+            padding: 8px 25px 8px 25px;
+            font-size: 15px;
+            font-weight: 600;
+          }
+          .base-price {
+            font-size: 22px;
+            font-weight: 600;
+          }
+
+          .base-price::before {
+            font-size: 13.5px;
+            top: -19px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 568px) and (max-width: 768px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    h4.title {
+      right: 53px;
+      font-size: 25px;
+      margin-bottom: 27px;
+    }
+    .options {
+      .title {
+        padding: 18px 5px 18px 9px;
+        h4 {
+          font-size: 27px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        img {
+          width: 24%;
+        }
+      }
+      .options-fixes {
+        padding-left: 5px;
+        .label {
+          padding-left: 3px;
+          margin-bottom: 8px;
+          .main {
+            font-size: 21px;
+            margin-bottom: 8px;
+            font-weight: 600;
+          }
+          .secondary {
+            font-size: 21px;
+          }
+        }
+        .segment-container {
+          padding-left: 4px;
+          padding-right: 4px;
+          .segment {
+            .arrow {
+              svg {
+                width: 30px;
+                margin-left: 8px;
+                margin-right: 8px;
+              }
+            }
+            .air-port {
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              .air-plan {
+                svg {
+                  width: 40px;
+                  position: relative;
+                  right: 12px;
+                }
+              }
+              span {
+                font-size: 18px;
+                font-weight: 600;
+              }
+              .icon-down {
+                position: relative;
+                left: 12px;
+              }
+            }
+            .air-port-list {
+              .cust-select {
+                .select-container {
+                  .value {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    .icon-label {
+                      svg {
+                        width: 40px;
+                      }
+                    }
+                    .label {
+                      font-size: 18px;
+                      bottom: 6px;
+                      font-weight: 600;
+                    }
+                    .icon-down {
+                    }
+                  }
+                  .items {
+                    top: 115%;
+                    ul {
+                      li {
+                        font-size: 16px;
+                        font-family: $font-sora;
+                      }
+                    }
+                  }
+                  .items.closed {
+                  }
+                }
+              }
+            }
+          }
+          .trajet-btn {
+            i {
+              font-size: 35px;
+            }
+            span {
+              font-size: 18px;
+              font-weight: 600;
+              top: 5px;
+              left: 12px;
+            }
+          }
+          .text-secondary {
+            font-size: 18px;
+            margin-top: 17px;
+            margin-left: 11px;
+          }
+        }
+      }
+      .options-to-choose {
+        position: relative;
+        padding-left: 5px;
+        margin-top: 21px;
+        .label {
+          .main {
+            font-size: 23px;
+          }
+        }
+        ul {
+          padding: 4px;
+          li {
+            margin-top: 10px;
+            font-size: 17px;
+
+            i {
+              margin-right: 2px;
+              position: relative;
+              bottom: 0.5px;
+            }
+          }
+        }
+        .price {
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+          button {
+            padding: 8px 25px 8px 25px;
+            font-size: 21px;
+            font-weight: 600;
+          }
+          .base-price {
+            font-size: 28px;
+            font-weight: 600;
+          }
+
+          .base-price::before {
+            font-size: 16.5px;
+            top: -19px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    margin-top: 58px;
+    margin-left: 5px;
+    margin-right: 5px;
+    h4.title {
+      right: 7px;
+      font-size: 22px;
+      margin-bottom: 27px;
+    }
+    .options {
+      .title {
+        padding: 12px 5px 12px 9px;
+        h4 {
+          font-size: 27px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        img {
+          width: 26%;
+        }
+      }
+      .options-fixes {
+        padding-left: 5px;
+        .label {
+          padding-left: 3px;
+          margin-bottom: 4px;
+          .main {
+            font-size: 18px;
+            margin-bottom: 4px;
+            font-weight: 600;
+          }
+          .secondary {
+            font-size: 16px;
+          }
+        }
+        .segment-container {
+          padding-left: 4px;
+          padding-right: 4px;
+          .segment {
+            margin-bottom: 8px;
+            .arrow {
+              svg {
+                width: 26px;
+                margin-left: 8px;
+                margin-right: 8px;
+              }
+            }
+            .air-port {
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              .air-plan {
+                svg {
+                  width: 30px;
+                  position: relative;
+                  right: 12px;
+                }
+              }
+              span {
+                font-size: 15px;
+                font-weight: 600;
+              }
+              .icon-down {
+                position: relative;
+                left: 12px;
+              }
+            }
+            .air-port-list {
+              .cust-select {
+                .select-container {
+                  .value {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    .icon-label {
+                      svg {
+                        width: 28px;
+                      }
+                    }
+                    .label {
+                      font-size: 15px;
+                      bottom: 6px;
+                      font-weight: 600;
+                    }
+                    .icon-down {
+                    }
+                  }
+                  .items {
+                    top: 115%;
+                    ul {
+                      li {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                  .items.closed {
+                  }
+                }
+              }
+            }
+          }
+          .trajet-btn {
+            display: none;
+          }
+          .text-secondary {
+            font-size: 14px;
+            margin-top: 17px;
+            margin-left: 11px;
+          }
+        }
+      }
+      .options-to-choose {
+        position: relative;
+        padding-left: 5px;
+        margin-top: 21px;
+        .label {
+          .main {
+            font-size: 18px;
+          }
+        }
+        ul {
+          padding: 4px;
+          li {
+            margin-top: 10px;
+            font-size: 13px;
+
+            i {
+              margin-right: 2px;
+              position: relative;
+              bottom: 0.5px;
+            }
+          }
+        }
+        .price {
+          margin-top: 22px;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          button {
+            padding: 8px 25px 8px 25px;
+            font-size: 15px;
+            font-weight: 600;
+          }
+          .base-price {
+            font-size: 22px;
+            font-weight: 600;
+          }
+
+          .base-price::before {
+            font-size: 13.5px;
+            top: -13px;
+          }
+        }
+      }
+    }
+    .map {
+      img {
+        height: 665px;
+        padding-left: 30px;
+      }
+    }
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    margin-top: 58px;
+    margin-left: 20px;
+    margin-right: 20px;
+    h4.title {
+      right: 7px;
+      font-size: 22px;
+      margin-bottom: 27px;
+    }
+    .options {
+      .title {
+        padding: 12px 5px 12px 9px;
+        h4 {
+          font-size: 27px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        img {
+          width: 26%;
+        }
+      }
+      .options-fixes {
+        padding-left: 5px;
+        .label {
+          padding-left: 3px;
+          margin-bottom: 4px;
+          .main {
+            font-size: 20px;
+            margin-bottom: 8px;
+            font-weight: 600;
+          }
+          .secondary {
+            font-size: 19px;
+          }
+        }
+        .segment-container {
+          padding-left: 4px;
+          padding-right: 4px;
+          .segment {
+            margin-bottom: 8px;
+            .arrow {
+              svg {
+                width: 26px;
+                margin-left: 8px;
+                margin-right: 8px;
+              }
+            }
+            .air-port {
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              .air-plan {
+                svg {
+                  width: 35px;
+                  position: relative;
+                  right: 12px;
+                }
+              }
+              span {
+                font-size: 16px;
+                font-weight: 600;
+              }
+              .icon-down {
+                position: relative;
+                left: 12px;
+              }
+            }
+            .air-port-list {
+              .cust-select {
+                .select-container {
+                  .value {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    .icon-label {
+                      svg {
+                        width: 34px;
+                      }
+                    }
+                    .label {
+                      font-size: 19px;
+                      bottom: 6px;
+                      font-weight: 600;
+                    }
+                    .icon-down {
+                    }
+                  }
+                  .items {
+                    top: 115%;
+                    ul {
+                      li {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                  .items.closed {
+                  }
+                }
+              }
+            }
+          }
+          .trajet-btn {
+            display: none;
+          }
+          .text-secondary {
+            font-size: 16px;
+            margin-top: 17px;
+            margin-left: 11px;
+          }
+        }
+      }
+      .options-to-choose {
+        position: relative;
+        padding-left: 5px;
+        margin-top: 21px;
+        .label {
+          .main {
+            font-size: 20px;
+          }
+        }
+        ul {
+          padding: 4px;
+          li {
+            margin-top: 10px;
+            font-size: 14px;
+
+            i {
+              margin-right: 2px;
+              position: relative;
+              bottom: 0.5px;
+            }
+          }
+        }
+        .price {
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+          button {
+            padding: 8px 25px 8px 25px;
+            font-size: 18px;
+            font-weight: 600;
+          }
+          .base-price {
+            font-size: 24px;
+            font-weight: 600;
+          }
+
+          .base-price::before {
+            font-size: 16px;
+            top: -19px;
+          }
+        }
+      }
+    }
+    .map {
+      img {
+        height: 654px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1300px) {
+    margin-top: 58px;
+    margin-left: 35px;
+    margin-right: 35px;
+    h4.title {
+      right: 24px;
+      font-size: 29px;
+      margin-bottom: 27px;
+    }
+    .options {
+      .title {
+        padding: 18px 5px 18px 9px;
+        h4 {
+          font-size: 27px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        img {
+          width: 26%;
+        }
+      }
+      .options-fixes {
+        padding-left: 5px;
+        .label {
+          padding-left: 3px;
+          margin-bottom: 8px;
+          .main {
+            font-size: 23px;
+            margin-bottom: 8px;
+            font-weight: 600;
+          }
+          .secondary {
+            font-size: 21px;
+          }
+        }
+        .segment-container {
+          padding-left: 4px;
+          padding-right: 4px;
+          .segment {
+            margin-bottom: 8px;
+            .arrow {
+              svg {
+                width: 34px;
+                margin-left: 8px;
+                margin-right: 8px;
+              }
+            }
+            .air-port {
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              .air-plan {
+                svg {
+                  width: 44px;
+                  position: relative;
+                  right: 12px;
+                }
+              }
+              span {
+                font-size: 19px;
+                font-weight: 600;
+              }
+              .icon-down {
+                position: relative;
+                left: 12px;
+              }
+            }
+            .air-port-list {
+              .cust-select {
+                .select-container {
+                  .value {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    .icon-label {
+                      svg {
+                        width: 43px;
+                      }
+                    }
+                    .label {
+                      font-size: 19px;
+                      bottom: 6px;
+                      font-weight: 600;
+                    }
+                    .icon-down {
+                    }
+                  }
+                  .items {
+                    top: 115%;
+                    ul {
+                      li {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                  .items.closed {
+                  }
+                }
+              }
+            }
+          }
+          .trajet-btn {
+            display: none;
+          }
+          .text-secondary {
+            font-size: 18px;
+            margin-top: 17px;
+            margin-left: 11px;
+          }
+        }
+      }
+      .options-to-choose {
+        position: relative;
+        padding-left: 5px;
+        margin-top: 21px;
+        .label {
+          .main {
+            font-size: 23px;
+          }
+        }
+        ul {
+          padding: 4px;
+          li {
+            margin-top: 10px;
+            font-size: 17px;
+
+            i {
+              margin-right: 2px;
+              position: relative;
+              bottom: 0.5px;
+            }
+          }
+        }
+        .price {
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+          button {
+            padding: 8px 25px 8px 25px;
+            font-size: 21px;
+            font-weight: 600;
+          }
+          .base-price {
+            font-size: 31px;
+            font-weight: 600;
+          }
+
+          .base-price::before {
+            font-size: 18.5px;
+            top: -19px;
+          }
+        }
+      }
+    }
+    .map {
+      img {
+        height: 721px;
+      }
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    margin-top: 58px;
+    margin-left: 63px;
+    margin-right: 63px;
+    h4.title {
+      right: 53px;
+      font-size: 29px;
+      margin-bottom: 27px;
+    }
+    .options {
+      .title {
+        padding: 18px 5px 18px 9px;
+        h4 {
+          font-size: 27px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+
+        img {
+          width: 26%;
+        }
+      }
+      .options-fixes {
+        padding-left: 5px;
+        .label {
+          padding-left: 3px;
+          margin-bottom: 8px;
+          .main {
+            font-size: 23px;
+            margin-bottom: 8px;
+            font-weight: 600;
+          }
+          .secondary {
+            font-size: 21px;
+          }
+        }
+        .segment-container {
+          padding-left: 4px;
+          padding-right: 4px;
+          .segment {
+            margin-bottom: 8px;
+            .arrow {
+              svg {
+                width: 34px;
+                margin-left: 8px;
+                margin-right: 8px;
+              }
+            }
+            .air-port {
+              padding-left: 20px;
+              padding-right: 20px;
+              padding-top: 3px;
+              padding-bottom: 3px;
+              .air-plan {
+                svg {
+                  width: 44px;
+                  position: relative;
+                  right: 12px;
+                }
+              }
+              span {
+                font-size: 19px;
+                font-weight: 600;
+              }
+              .icon-down {
+                position: relative;
+                left: 12px;
+              }
+            }
+            .air-port-list {
+              .cust-select {
+                .select-container {
+                  .value {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    .icon-label {
+                      svg {
+                        width: 43px;
+                      }
+                    }
+                    .label {
+                      font-size: 19px;
+                      bottom: 6px;
+                      font-weight: 600;
+                    }
+                    .icon-down {
+                    }
+                  }
+                  .items {
+                    top: 115%;
+                    ul {
+                      li {
+                        font-size: 14px;
+                      }
+                    }
+                  }
+                  .items.closed {
+                  }
+                }
+              }
+            }
+          }
+          .trajet-btn {
+            display: none;
+          }
+          .text-secondary {
+            font-size: 18px;
+            margin-top: 17px;
+            margin-left: 11px;
+          }
+        }
+      }
+      .options-to-choose {
+        position: relative;
+        padding-left: 5px;
+        margin-top: 21px;
+        .label {
+          .main {
+            font-size: 23px;
+          }
+        }
+        ul {
+          padding: 4px;
+          li {
+            margin-top: 10px;
+            font-size: 17px;
+
+            i {
+              margin-right: 2px;
+              position: relative;
+              bottom: 0.5px;
+            }
+          }
+        }
+        .price {
+          flex-direction: column;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          padding-left: 15px;
+          padding-right: 15px;
+          button {
+            padding: 8px 25px 8px 25px;
+            font-size: 21px;
+            font-weight: 600;
+          }
+          .base-price {
+            font-size: 31px;
+            font-weight: 600;
+          }
+
+          .base-price::before {
+            font-size: 18.5px;
+            top: -19px;
+          }
+        }
+      }
+    }
+    .map {
+      img {
+        height: 721px;
+      }
+    }
+  }
+  /********************/
+  @media screen and (max-width: 320px) {
+    .segment {
+    }
+  }
+  @media screen and (max-width: 200px) {
+    .segment {
+      flex-direction: column;
+      align-items: center;
+
+      .air-port {
+        width: 70% !important;
+      }
+    }
+    .price {
+      flex-direction: column-reverse;
+
+      .base-price {
+        margin-bottom: 25px;
+      }
+
+      .base-price::before {
+        font-size: 11.5px;
+        bottom: 80px !important;
+      }
+    }
+  }
+}

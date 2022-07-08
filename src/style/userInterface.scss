@@ -1,0 +1,19 @@
+.flight-pass{
+    .header{
+        background: rgb(186,24,44);
+        background: linear-gradient(120deg, rgba(186,24,44,1) 0%, rgba(186,24,44,1) 47.5%, rgba(221,157,165,1) 47.5%, rgba(221,157,165,1) 50%, rgba(223,233,221,1) 50%, rgba(223,233,221,1) 52.5%, rgba(182,154,99,1) 52.5%, rgba(182,154,99,1) 100%);
+        position: relative;
+        display: flex;
+        align-items: center;
+        span{
+            color: white;
+            font-size: 55px;
+            $font-sora : 'Sora', sans-serif;
+            font-size: 41px;
+            margin-left: 31px;
+        }
+    }
+    .details{
+        background-image: url('Intersection-31.png');
+    }
+}

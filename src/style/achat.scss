@@ -1,0 +1,74 @@
+.achat {
+    background-image: url("./configuration-air.png");
+    background-repeat: no-repeat;
+    padding: 112px 60px 35px 60px;
+    background-position-x: center;
+    .achat-container {
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: -2px 7px 13px rgba(0, 0, 0, 0.16);
+        padding: 30px 40px 20px 40px;
+    }
+
+@media screen and (max-width: 250px) {
+    padding: 49px 5px 35px 5px;
+    background-position-y: -50px;
+    .achat-container{
+        padding: 20px 9px 20px 9px;
+        border-radius: 0px!important;
+    }
+}
+@media screen and (min-width: 250px) and (max-width: 300px){
+    padding: 49px 5px 35px 5px;
+    background-position-y: -50px;
+    .achat-container{
+        padding: 20px 9px 20px 9px;
+        border-radius: 0px!important;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 430px){
+    padding: 49px 5px 35px 5px;
+    background-position-y: -50px;
+    .achat-container{
+        padding: 20px 9px 20px 9px;
+        border-radius: 0px!important;
+    }
+
+}
+@media screen and (min-width: 430px) and (max-width: 568px){
+    padding: 49px 5px 35px 5px;
+    background-position-y: -50px;
+    .achat-container{
+        padding: 20px 9px 20px 9px;
+        border-radius: 0px!important;
+    }
+
+}
+@media screen and (min-width: 568px) and (max-width:768px ){
+    padding: 60px 15px 26px 15px;
+    background-position-y: -38px;
+    .achat-container{
+        padding: 15px 5px 15px 5px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    padding: 64px 30px 18px 30px;
+    background-position-y: -34px;
+    .achat-container{
+        padding: 19px 22px 19px 22px;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    padding: 69px 36px 36px 36px;
+    background-position-y: -34px;
+    .achat-container {
+        padding: 19px 22px 19px 22px;
+    }
+}
+@media screen and (min-width: 1200px){
+    padding: 112px 60px 35px 60px;
+    .achat-container {
+        padding: 30px 40px 20px 40px;
+    }
+}
+}

@@ -1,0 +1,133 @@
+
+
+        <div>
+
+            <div ref={Ref} className="recapPdf container">
+                <div className="col-8  d-block m-auto">
+                    <div className="header ">
+                        <div className="logo ">
+                            <img src='./assets/images/logo-white.png' alt="" />
+                        </div>
+                    </div>
+                    <div className="recap-container ">
+                        <div className="position-relative ">
+                            <h4>PURCHASE RECEIPT INFORMATION</h4>
+                        </div>
+                        <div className="reference d-flex mt-3">
+                            <div className="label">
+                                Reference
+                            </div>
+                            <div className="value">
+                                TUGOZYOX0AF7LV6ZXRHJGQTK372XD2XY
+                            </div>
+                        </div>
+                        <div className="form">
+                            <div className="d-flex justify-content-between">
+                                <div className="col-6 p-2">
+                                    <div className="field">
+                                        <label htmlFor="name">Nom passager</label>
+                                        <input name="name" value="wahid" disabled />
+                                    </div>
+                                    <div className="field">
+                                        <label htmlFor="city">Origine</label>
+                                        <input name="city" value="Casablanca" disabled />
+                                    </div>
+                                    <div className="field">
+                                        <label htmlFor="delay">Durée du flightpass</label>
+                                        <input name="delay" value="6 mois" disabled />
+                                    </div>
+                                    <div className="field">
+                                        <label>Date d'émission</label>
+                                        <input value="2.03.2022" disabled />
+                                    </div>
+                                    <div className="field">
+                                        <label>Nombre de coupons</label>
+                                        <input value="6" disabled />
+                                    </div>
+                                </div>
+                                <div className="col-6 p-2">
+                                    <div>
+                                        <div className="field">
+                                            <label>Prénom passager</label>
+                                            <input value="Abdellaoui" disabled />
+                                        </div>
+                                        <div className="field">
+                                            <label>Destinition acheté</label>
+                                            <input value="Pris" disabled />
+                                        </div>
+                                        <div className="field">
+                                            <label>Date to travel du flightpass</label>
+                                            <input value="8.06.2022" disabled />
+                                        </div>
+                                        <div className="field">
+                                            <label>date d'achat</label>
+                                            <input value="2.03.2022" disabled />
+                                        </div>
+                                        <div className="field">
+                                            <label>Id de paiement</label>
+                                            <input value="id de paiement" disabled />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="d-flex justify-content-end">
+                                <div className="price ">
+                                    Prix du Flightpass <span className="">800DH</span>
+                                </div>
+                            </div>
+                            <div className="services">
+                                <h4>NOS SERVICES</h4>
+                                <ul>
+                                    <li>
+                                        <i>
+                                            <GiUpgrade />
+                                        </i>
+                                        <span>
+                                            Surclassement
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i>
+                                            <FaSuitcaseRolling />
+                                        </i>
+                                        <span>
+                                            Bagage supplémentaire
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i>
+                                            <MdAirlineSeatReclineExtra />
+                                        </i>
+                                        <span>Choix du siége</span>
+                                    </li>
+                                    <li>
+                                        <i>
+                                            <GiHotMeal />
+                                        </i>
+                                        <span>Repas Spéciaux</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="assist mt-5">
+                            <h4>RAM ASSISTANT :</h4>
+                            <h5>L’appli Qui Vous Simplifie Le Voyage</h5>
+                            <div className="d-flex">
+                                <div className="android">
+                                    <img src="./assets/images/ram-assistant-android.png" alt="" />
+                                </div>
+                                <div className="android">
+                                    <img src="./assets/images/ram-assistant-ios.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    )
+}
+

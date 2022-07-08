@@ -1,0 +1,133 @@
+@import "./variable";
+.recapPdf {
+    font-family: $font-sora;
+    .header {
+        margin-bottom: 55px;
+        position: relative;
+        left: 25px;
+        .logo {
+            background-color: #ba182c;
+            width: max-content;
+            position: relative;
+            right: 72px;
+            padding: 41px;
+            img {
+                width: 167px;
+            }
+        }
+    }
+    .recap-container {
+        margin-top: 25px;
+        h4 {
+            $font-Raleway: "Raleway", sans-serif;
+            color: #6a2f4f;
+            font-weight: 700;
+        }
+        h4::before {
+            background-image: url("../../public/assets/images/Groupe\ 270.png");
+            display: inline-block;
+            background-repeat: no-repeat;
+            content: "";
+            position: absolute;
+            background-size: 60px 60px;
+            width: 60px;
+            height: 60px;
+            top: -34px;
+            left: -41px;
+        }
+        .reference {
+            padding: 8px;
+            background-color: #968f9c45;
+            font-weight: 700;
+            font-size: 14px;
+            .label {
+                padding: 8px;
+                border-right: 1px solid #aaa;
+            }
+            .value {
+                padding: 8px;
+            }
+        }
+        .form {
+            margin-top: 46px;
+            .field {
+                width: 100%;
+                position: relative;
+                height: 80px;
+                margin-bottom: 15px;
+                label {
+                    position: absolute;
+                    top: -27px;
+                    font-size: 13px;
+                    color: #968f9c;
+                }
+                input {
+                    font-size: 15px;
+                    width: 70%;
+                    border: none;
+                    border-bottom: 1px solid #bcbbbc;
+                    color: #000000ba;
+                }
+            }
+            .price {
+                background: linear-gradient(#c20831 0%, #f87988 100%);
+                box-shadow: 0px 10px 26px rgba(168, 1, 35, 0.35);
+                font-size: 22px;
+                color: white;
+                border-radius: 5px;
+                padding: 15px;
+                span {
+                    margin-left: 34px;
+                }
+            }
+        }
+        .services {
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-evenly;
+                background: #b69a6347;
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 14px;
+                    align-items: center;
+                    position: relative;
+                    i {
+                        color: #d00b41;
+                        font-size: 55px;
+                    }
+                    i::after {
+                        content: "";
+                        height: 46px;
+                        width: 1px;
+                        background-color: #1b191a4a;
+                        position: absolute;
+                        right: -20px;
+                        top: 37px;
+                    }
+                    span {
+                        text-align: center;
+                        background-color: #b69a6370;
+                        padding: 7px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .assist{
+            h5{
+                color: #6a2f4f;
+                font-family: $font-Raleway;
+                font-weight:500;
+            }
+            img{
+                width: 200px;
+            }
+        }
+    }
+}

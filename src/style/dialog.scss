@@ -1,0 +1,44 @@
+@import "./variable";
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    max-width: max-content!important;
+}
+.configuration-dialog{
+    width: 100%;
+    padding: 35px;
+    button{
+        border: none;
+        font-family: $font-Raleway;
+        font-size: 21px;
+        padding: 9px 52px 9px 52px;
+        border-radius: 8px;
+        font-weight: 600;
+        
+    }
+    button.forMe{
+        background: #da3b58;
+        color: white;
+    }
+    button.forAnother{
+        border: 1px solid #da3b58;
+        background-color: transparent;
+        color: black;
+    }
+    button.auth{
+        width: 100%;
+    }
+    button.signIn{
+        background: #da3b58;
+        color: white;
+    }
+    button.signUp{
+        background-color: transparent;
+        border: 1px solid #da3b58;
+        color: black;
+    }
+    h3{
+        text-align: center;
+        color: #da3b58;
+        font-family: $font-Raleway;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,99 @@
+@mixin consomationGridBetween($breakpoint) {
+    @if $breakpoint<=250 {
+        @media only screen and (max-width: 250px) {
+            @content;
+        }
+    } @else if $breakpoint>250 and $breakpoint<=300 {
+        @media only screen and (min-width: 250px) and (max-width: 300px) {
+            @content;
+        }
+    } @else if $breakpoint>300 and $breakpoint<=430 {
+        @media only screen and (min-width: 300px) and (max-width: 430px) {
+            @content;
+        }
+    } @else if $breakpoint>430 and $breakpoint<=568 {
+        @media only screen and (min-width: 430px) and (max-width: 568px) {
+            @content;
+        }
+    } @else if $breakpoint>568 and $breakpoint<=768 {
+        @media only screen and (min-width: 568px) and (max-width: 768px) {
+            @content;
+        }
+    } @else if $breakpoint>768 and $breakpoint<=992 {
+        @media only screen and (min-width: 768px) and (max-width: 992px) {
+            @content;
+        }
+    } @else if $breakpoint>992 and $breakpoint<=1200 {
+        @media only screen and (min-width: 992px) and (max-width: 1200px) {
+            @content;
+        }
+    } @else if $breakpoint>1200 {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+@mixin consomationGridMin($breakpoint) {
+    @if $breakpoint==250 {
+        @media only screen and (min-width: 250px) {
+            @content;
+        }
+    } @else if $breakpoint == 300 {
+        @media only screen and (min-width: 300px) {
+            @content;
+        }
+    } @else if $breakpoint==430 {
+        @media only screen and (min-width: 430px) {
+            @content;
+        }
+    } @else if $breakpoint==568 {
+        @media only screen and (min-width: 568px) {
+            @content;
+        }
+    } @else if $breakpoint==768 {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    } @else if $breakpoint==992 {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }
+    } @else if $breakpoint==1200 {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+@mixin consomationGridMax($breakpoint) {
+    @if $breakpoint==250 {
+        @media only screen and (max-width: 250px) {
+            @content;
+        }
+    } @else if $breakpoint==300 {
+        @media only screen and (max-width: 300px) {
+            @content;
+        }
+    } @else if $breakpoint==430 {
+        @media only screen and (max-width: 430px) {
+            @content;
+        }
+    } @else if $breakpoint==568 {
+        @media only screen and (max-width: 568px) {
+            @content;
+        }
+    } @else if $breakpoint==768 {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    } @else if $breakpoint==992 {
+        @media only screen and (max-width: 992px) {
+            @content;
+        }
+    } @else if $breakpoint==1200 {
+        @media only screen and (max-width: 1200px) {
+            @content;
+        }
+    } 
+}
+

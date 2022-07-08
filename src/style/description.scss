@@ -1,0 +1,273 @@
+@import "./variable";
+.home {
+  .description {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    i {
+    }
+    h4 {
+      font-family: $font-sora;
+      color: #707070;
+      font-weight: bold;
+    }
+
+    p {
+    }
+
+    h2 {
+      font-family: "Sora", sans-serif;
+      font-weight: 300;
+      color: #0d0d0d;
+      padding-left: 20px;
+      font-weight: 600;
+    }
+
+    @media screen and (max-width: 300px) {
+      ul.large-device {
+        display: none;
+      }
+      h2.large-device {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 300px) and (max-width: 430px) {
+      ul.large-device {
+        display: none;
+      }
+      h2.large-device {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 430px) and (max-width: 768px) {
+      ul.large-device {
+        display: none;
+      }
+      h2.large-device {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+      h2 {
+        margin-top: 70px;
+        margin-bottom: 70px;
+      }
+      ul.large-device {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+
+        li {
+          background-color: white;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 1px 1px 13px #0000002e;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 15px;
+          margin-left: 15px;
+
+          i {
+            background-color: #d00b41;
+            height: max-content;
+            color: white;
+            padding: 2px 7px;
+            font-size: 20px;
+            border-radius: 6px;
+            margin-right: 9px;
+
+            svg {
+              position: relative;
+              bottom: 2.5px;
+            }
+          }
+
+          h6 {
+            font-family: $font-sora;
+            font-weight: 500;
+            text-align: center;
+            color: #707070;
+          }
+
+          p {
+            font-family: $font-sora;
+            color: #707070;
+            font-weight: 300;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      h2 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+      ul.large-device {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding: 0;
+
+        li {
+          background-color: white;
+          /* padding: 3px; */
+          border-radius: 15px;
+          box-shadow: 1px 1px 13px #0000002e;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 16px;
+          margin-left: 15px;
+          /* padding-left: 40px; */
+          /* padding-right: 43px; */
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 15px;
+
+          i {
+            background-color: #d00b41;
+            height: max-content;
+            color: white;
+            padding: 2px 7px;
+            font-size: 20px;
+            border-radius: 6px;
+            margin-right: 9px;
+
+            svg {
+              position: relative;
+              bottom: 2.5px;
+            }
+          }
+
+          h6 {
+            font-family: $font-sora;
+            font-weight: 500;
+            text-align: center;
+            color: #707070;
+          }
+
+          p {
+            font-family: $font-sora;
+            color: #707070;
+            font-weight: 300;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1300px) {
+      h2 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        font-weight: 600;
+      }
+      ul.large-device {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        margin-left: 25px;
+        margin-right: 25px;
+        li {
+          background-color: white;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 1px 1px 13px #0000002e;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 15px;
+          margin-left: 15px;
+
+          i {
+            background-color: #d00b41;
+            height: max-content;
+            color: white;
+            padding: 2px 7px;
+            font-size: 24px;
+            border-radius: 6px;
+            margin-right: 9px;
+
+            svg {
+              position: relative;
+              bottom: 2.5px;
+            }
+          }
+
+          h6 {
+            font-family: $font-sora;
+            font-weight: 500;
+            text-align: center;
+            color: #707070;
+          }
+
+          p {
+            font-family: $font-sora;
+            color: #707070;
+            font-weight: 300;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: 1300px) {
+      h2 {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        font-weight: 600;
+      }
+      ul.large-device {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        margin-right: 50px;
+        margin-left: 50px;
+        li {
+          background-color: white;
+          padding: 20px;
+          border-radius: 15px;
+          box-shadow: 1px 1px 13px #0000002e;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 15px;
+          margin-left: 15px;
+
+          i {
+            background-color: #d00b41;
+            height: max-content;
+            color: white;
+            padding: 2px 7px;
+            font-size: 24px;
+            border-radius: 6px;
+            margin-right: 9px;
+
+            svg {
+              position: relative;
+              bottom: 2.5px;
+            }
+          }
+
+          h6 {
+            font-family: $font-sora;
+            font-weight: 500;
+            text-align: center;
+            color: #707070;
+          }
+
+          p {
+            font-family: $font-sora;
+            color: #707070;
+            font-weight: 300;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

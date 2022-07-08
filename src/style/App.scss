@@ -1,0 +1,270 @@
+@import "./variable";
+.sliderDelay {
+  padding: 25px 0 0 0;
+  width: 70%;
+  position: relative;
+  display: block;
+  margin: auto;
+  margin-bottom: 35px !important;
+  margin-top: 35px !important;
+  .rail {
+    height: 4px;
+    background-color: #cf889b;
+    position: absolute;
+    padding-left: 26%;
+    width: 100%;
+
+    i {
+      position: absolute;
+      top: -16px;
+    }
+    .left {
+      left: -30px;
+    }
+    .right {
+      right: -31px;
+    }
+  }
+  .stepContainer {
+    height: 4px;
+    position: absolute;
+    background-color: #d00b41;
+    display: flex;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    svg {
+      position: absolute;
+      right: 0;
+      bottom: -13px;
+      width: 5px;
+      height: 30px;
+    }
+  }
+  .step {
+    width: 0px;
+    position: relative;
+    svg {
+      width: 3px;
+      height: 30px;
+      position: relative;
+      bottom: 13px;
+      right: 14.5px;
+    }
+    span {
+      width: max-content;
+      display: inline-flex;
+      position: absolute;
+      left: -22px;
+    }
+    button {
+      margin: 0;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      height: max-content;
+      width: 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 430px) {
+  .sliderDelay {
+    width: 89%;
+    .rail {
+      i {
+        top: -10px !important;
+        z-index: 1001;
+        img {
+          width: 30px;
+        }
+      }
+      i.left {
+        left: -20px !important;
+
+      }
+      i.right {
+        right: -20px !important;
+
+      }
+    }
+    svg{
+      width: 4px!important;
+    }
+  }
+  .achat .configuration .options span {
+    font-weight: 500;
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 430px) and (max-width: 568px) {
+  .sliderDelay {
+    padding: 25px 0 0 0;
+    width: 86%;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-bottom: 35px !important;
+    margin-top: 35px !important;
+    .rail {
+      height: 4px;
+      background-color: #cf889b;
+      position: absolute;
+      padding-left: 26%;
+      width: 100%;
+
+      i {
+        position: absolute;
+        top: -16px;
+      }
+      .left {
+        left: -30px;
+      }
+      .right {
+        right: -31px;
+      }
+    }
+    .stepContainer {
+      height: 4px;
+      position: absolute;
+      background-color: #d00b41;
+      display: flex;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      svg {
+        position: absolute;
+        right: 0;
+        bottom: -13px;
+        width: 5px;
+        height: 30px;
+      }
+    }
+    .step {
+      width: 0px;
+      position: relative;
+      svg {
+        width: 3px;
+        height: 30px;
+        position: relative;
+        bottom: 13px;
+        right: 14.5px;
+      }
+      span {
+        width: max-content;
+        display: inline-flex;
+        position: absolute;
+        left: -22px;
+        font-size: 13px;
+      }
+      button {
+        margin: 0;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        height: max-content;
+        width: 25px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 568px) and (max-width: 768px) {
+  .test{
+    display: none;
+  }
+  .sliderDelay {
+    padding: 25px 0 0 0;
+    width: 86%;
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-bottom: 35px !important;
+    margin-top: 35px !important;
+    .rail {
+      height: 4px;
+      background-color: #cf889b;
+      position: absolute;
+      padding-left: 26%;
+      width: 100%;
+
+      i {
+        position: absolute;
+        top: -16px;
+      }
+      .left {
+        left: -30px;
+      }
+      .right {
+        right: -31px;
+      }
+    }
+    .stepContainer {
+      height: 4px;
+      position: absolute;
+      background-color: #d00b41;
+      display: flex;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      svg {
+        position: absolute;
+        right: 0;
+        bottom: -13px;
+        width: 5px;
+        height: 30px;
+      }
+    }
+    .step {
+      width: 0px;
+      position: relative;
+      svg {
+        width: 3px;
+        height: 30px;
+        position: relative;
+        bottom: 13px;
+        right: 14.5px;
+      }
+      span {
+        width: max-content;
+        display: inline-flex;
+        position: absolute;
+        left: -22px;
+        font-size: 13px;
+      }
+      button {
+        margin: 0;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        height: max-content;
+        width: 25px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+@media screen and (min-width: 1200px) {
+  .App {
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.dialog-map{
+  img{
+    width: 100%;
+  }
+ 
+}
+.css-sghohy-MuiButtonBase-root-MuiButton-root{
+  background-color: #d00b41!important;
+}
+

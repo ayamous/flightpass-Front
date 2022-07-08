@@ -1,0 +1,309 @@
+@import "./variable";
+
+.formContact {
+    h3 {
+        font-family: $font-sora;
+    }
+    form {
+        background-color: white;
+        display: block;
+        margin: auto;
+        border-radius: 9px;
+        border: 1px solid #d1d1d1a1;
+        padding: 24px;
+        margin-top: 29px;
+        h6 {
+            font-family: $font-sora;
+            font-weight: 700;
+            text-align: left;
+            color: #0d0d0d;
+            opacity: 0.8;
+        }
+        span.warning {
+            font-family: $font-sora;
+            font-weight: normal;
+            text-align: left;
+            color: #ba182c;
+            position: relative;
+            top: 13px;
+            font-weight: 500;
+        }
+        .field {
+            position: relative;
+            input {
+                border-radius: 9px;
+                background: #fcfcfc;
+                border: 0.25px solid #70707042;
+                padding: 13px;
+                margin-top: 71px !important;
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+            input:disabled {
+                border: none;
+            }
+            input:focus {
+                box-shadow: 0 0 5px rgb(12, 146, 184);
+                border: 1px solid rgb(16, 142, 177);
+                outline: none;
+            }
+            label {
+                font-family: $font-sora;
+                font-weight: normal;
+                text-align: left;
+                position: absolute;
+                bottom: 60px;
+                span {
+                    color: #d00b41;
+                }
+            }
+            i {
+                position: absolute;
+                right: 7px;
+                top: 25%;
+                img {
+                    width: 28px;
+                }
+            }
+        }
+        .adresse {
+            margin-top: 26px;
+            font-family: $font-sora;
+            p {
+                color: #666;
+                margin-top: 5px;
+            }
+        }
+    }
+    .msg {
+        color: #000;
+        font-family: $font-sora;
+        margin-top: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .actions {
+        display: flex;
+        justify-content: center;
+
+        justify-content: space-evenly;
+        margin-top: 27px;
+        button {
+            color: white;
+            font-family: $font-sora;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            padding: 13px 59px;
+            border-radius: 5px;
+        }
+        button.cancel {
+            background: linear-gradient(rgba(222, 150, 7, 0.6) 0%, #a37927 100%);
+            box-shadow: 0px 10px 26px rgba(168, 1, 35, 0.35);
+        }
+        button.validate {
+            background: linear-gradient(#c20831 0%, #f87988 100%);
+            box-shadow: 0px 10px 26px rgba(168, 1, 35, 0.35);
+        }
+    }
+    @media screen and (max-width: 300px){
+
+    }
+    @media screen and (min-width: 300px) and (max-width: 430px){
+        padding: 73px 20px 10px 20px;
+    
+    }
+    @media screen and (min-width: 430px) and (max-width:768px ){
+        padding: 73px 20px 10px 20px;
+    
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        padding: 71px 10px 10px 10px;
+        h3{
+            font-size: 23px!important;
+        }
+        h6{
+            font-size: 100%;
+        }
+     
+    
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+        padding: 76px 50px 11px 10px;
+        h3{
+            font-size: 23px!important;
+        }
+        h6{
+            font-size: 100%;
+        }
+    }
+    @media screen and (min-width: 1200px){
+        padding: 76px 50px 11px 10px;
+        h6{
+            font-size: 115%;
+        }
+    }
+    
+}
+
+.recap {
+    margin-top: 55px;
+    .segmantImg {
+        img {
+            width: 100%;
+        }
+    }
+    position: relative;
+    .circularProgress {
+        position: absolute;
+        z-index: 1001;
+        top: 50%;
+        left: 45%;
+    }
+    .load {
+        opacity: 0.4;
+    }
+
+    .recap-container {
+        padding: 15px 10px 15px 10px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.16);
+        .recap-options {
+            .options-fixes {
+                .label {
+                    margin-top: 21px;
+                    font-family: $font-museo;
+                    .main {
+                        color: #cf2547;
+                        font-size: 20px;
+                        font-weight: bold;
+                        opacity: 0.9;
+                    }
+                    .secondary {
+                        color: #666;
+                        font-size: 20px;
+                        position: relative;
+                        bottom: 1px;
+                    }
+                }
+                svg.line {
+                    width: 100%;
+                }
+                .segment {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    font-family: $font-sora;
+                    margin-bottom: 25px;
+                    margin-top: 15px;
+                    span {
+                        font-size: 100%;
+                        font-weight: 600;
+                    }
+                    svg.arrow {
+                        width: 28px;
+                    }
+                }
+                .text-secondary {
+                    font-family: $font-museo;
+                    font-weight: 700;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    padding-left: 2%;
+                    span {
+                        color: black;
+                        position: relative;
+                    }
+                }
+            }
+
+            .options-to-choose {
+                .label {
+                    font-family: $font-museo;
+                    margin-bottom: 15px;
+                    .main {
+                        color: #cf2547;
+                        font-weight: bold;
+                        opacity: 0.9;
+                        font-size: 20px;
+                    }
+                }
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    padding-left: 2%;
+                    li {
+                        font-family: $font-museo;
+                        color: #000;
+                        font-weight: 700;
+                        font-size: 16px;
+                        margin-bottom: 8px;
+
+                        i {
+                            color: #cb952b;
+                        }
+                    }
+                }
+            }
+
+            .price {
+                font-family: $font-sora;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                position: relative;
+                margin-right: 36px;
+                margin-top: 29px;
+                .price-container {
+                    border: 1px solid #aaa;
+                    padding: 21px 4px 0px 8px;
+                    border-radius: 8px;
+                    /* box-shadow: 1px 1px 1px 1px; */
+                    border: 1px solid #b59966;
+                    box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+                    .total {
+                        position: relative;
+                        font-size: 24px;
+                        font-weight: 700;
+                        span {
+                            font-size: 15px;
+                            width: max-content;
+                            font-weight: 500;
+                        }
+                        .unitPrice {
+                            position: absolute;
+                            bottom: 30px;
+                            font-size: 15px;
+                            width: max-content;
+                            left: 9%;
+                        }
+                    }
+                    p {
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 300px){
+
+    }
+    @media screen and (min-width: 300px) and (max-width: 430px){
+    
+    }
+    @media screen and (min-width: 430px) and (max-width:768px ){
+    
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+    
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+        padding: 0px!important
+    }
+    @media screen and (min-width: 1200px){
+        padding: 0px!important
+    }
+}

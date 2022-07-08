@@ -1,0 +1,740 @@
+@import "../style/mediaQueries/consomation.scss";
+@import "../style/variable.scss";
+.consomation {
+    @include consomationGridMin(568) {
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu {
+        background: #61485621;
+        //opacity: 0.1;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding-left: 0.5vw;
+            font-family: $font-sora;
+        }
+        .main-list {
+            width: 100%;
+            margin-bottom: 5px;
+            .label {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                //padding: 5px;
+                i {
+                    width: 3vw;
+                    display: flex;
+                    justify-content: center;
+                    padding: 5px;
+                    background-color: white;
+                    svg {
+                        font-size: 2vw;
+                    }
+                }
+                span {
+                    padding: 5px;
+                    width: 14vw;
+                    display: flex;
+                    align-items: center;
+                    background-color: white;
+                    color: white;
+                }
+            }        
+        }
+        .main-list.active{
+            i{
+                color: white;
+                background: #61374e;
+            }
+            span{
+                background: #61374e;
+            }
+        }
+        @include consomationGridMax(568) {
+            width: 0;
+        }
+        @include consomationGridBetween(768) {
+            width: 28vw;
+            background-color: aqua;
+            height: 100vh;
+        }
+        @include consomationGridBetween(992) {
+            width: 28vw;
+            background-color: aqua;
+            height: 100vh;
+        }
+        @include consomationGridBetween(1200) {
+            width: 23vw;
+            background-color: aqua;
+            height: 100vh;
+        }
+        @include consomationGridMin(1200) {
+            width: 18vw;
+        }
+    }
+    .consomation-container {
+        position: relative;
+        @include consomationGridMin(1200) {
+            width: 72vw;
+            margin-right: 6vw;
+        }
+        .flightPass-slider {
+            @include consomationGridMin(568) {
+                display: none;
+            }
+            position: relative;
+            @include consomationGridBetween(430) {
+                padding-left: 3vw;
+                padding-right: 3vw;
+            }
+            @include consomationGridBetween(568) {
+                padding-left: 3vw;
+                padding-right: 3vw;
+            }
+            .arrow {
+                position: absolute;
+                z-index: 1001;
+                background: #ba182c;
+                @include consomationGridMax(568) {
+                    top: calc(50% - 13px);
+                }
+                @include consomationGridBetween(430) {
+                    width: 9vw;
+                    height: 9vw;
+                }
+                @include consomationGridBetween(568) {
+                    width: 7.5vw;
+                    height: 7.5vw;
+                }
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+                i {
+                    color: white;
+                    position: relative;
+                    bottom: 1vw;
+                    @include consomationGridBetween(430) {
+                        font-size: 8vw;
+                    }
+                    @include consomationGridBetween(568) {
+                        font-size: 6.5vw;
+                    }
+                }
+            }
+            .arrow.prev {
+                left: 0;
+            }
+            .arrow.next {
+                right: 0;
+                i {
+                    left: 2px;
+                }
+            }
+        }
+        .flightPass-list {
+            @include consomationGridMax(568) {
+                display: none;
+            }
+            @include consomationGridMax(992) {
+                width: 68vw;
+                position: relative;
+                right: 2vw;
+            }
+            @include consomationGridMin(992) {
+                width: 100%;
+            }
+        }
+        .flightPass {
+            background-image: url("../../public/assets/images/Groupe-de-masques-2.png");
+            padding-bottom: 25px;
+            @include consomationGridMin(568) {
+                border-radius: 15px;
+                box-shadow: 4px 2px 11px rgba(0, 0, 0, 0.16);
+                margin-bottom: 25px;
+                margin-top: 12px;
+            }
+            .title {
+                position: relative;
+                display: flex;
+                align-items: center;
+                color: white;
+                font-family: $font-sora;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                @include consomationGridMin(568) {
+                    background: linear-gradient(
+                        120deg,
+                        rgba(186, 24, 44, 1) 0%,
+                        rgba(186, 24, 44, 1) 47.5%,
+                        rgba(221, 157, 165, 1) 47.5%,
+                        rgba(221, 157, 165, 1) 50%,
+                        rgba(223, 233, 221, 1) 50%,
+                        rgba(223, 233, 221, 1) 52.5%,
+                        rgba(182, 154, 99, 1) 52.5%,
+                        rgba(182, 154, 99, 1) 100%
+                    );
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                }
+                @include consomationGridMax(768) {
+                    padding: 10px;
+                    border-bottom-right-radius: 35px;
+                    background-color: rgba(186, 24, 44, 1);
+                }
+                img {
+                    @include consomationGridBetween(430) {
+                        width: 15vw;
+                    }
+                    @include consomationGridBetween(568) {
+                        width: 14vw;
+                    }
+                    @include consomationGridBetween(768) {
+                        width: 12vw;
+                    }
+                    @include consomationGridBetween(992) {
+                        width: 9.5vw;
+                    }
+                    @include consomationGridBetween(1200) {
+                        width: 8vw;
+                    }
+                    @include consomationGridMin(1200) {
+                        width: 7vw;
+                    }
+                }
+                span {
+                    @include consomationGridMax(568) {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+                        width: max-content;
+                    }
+                    @include consomationGridBetween(430) {
+                        font-size: 4.5vw;
+                    }
+                    @include consomationGridBetween(568) {
+                        font-size: 4vw;
+                    }
+                    @include consomationGridBetween(768) {
+                        font-size: 2.2vw;
+                    }
+                    @include consomationGridBetween(992) {
+                        font-size: 2vw;
+                    }
+                    @include consomationGridBetween(1200) {
+                        font-size: 1.5vw;
+                        margin-left: 2vw;
+                    }
+                    @include consomationGridMin(1200) {
+                        font-size: 1.4vw;
+                        margin-left: 2vw;
+                    }
+                }
+            }
+            .content {
+                font-family: $font-sora;
+                padding-top: 25px;
+                @include consomationGridMax(992) {
+                    padding-left: 2vw;
+                    padding-right: 2vw;
+                }
+                @include consomationGridMin(992) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: start;
+                    padding-left: 2vw;
+                    padding-right: 5vw;
+                }
+                .userInfo {
+                    display: flex;
+                    @include consomationGridBetween(430) {
+                        font-size: 3.5vw;
+                    }
+                    @include consomationGridBetween(568) {
+                        font-size: 2.8vw;
+                    }
+                    @include consomationGridBetween(768) {
+                        font-size: 1.9vw;
+                    }
+                    @include consomationGridBetween(992) {
+                        font-size: 1.65vw;
+                    }
+                    @include consomationGridMax(992) {
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+                    @include consomationGridBetween(1200) {
+                        order: 1;
+                        width: 30%;
+                        flex-direction: column;
+                    }
+                    @include consomationGridMin(1200) {
+                        order: 1;
+                        width: 25%;
+                        flex-direction: column;
+                    }
+                    .secondary {
+                        font-weight: 200;
+                    }
+                }
+                @include consomationGridMin(992) {
+                    .userInfo > div {
+                        margin-bottom: 15px;
+                    }
+                }
+                .destination {
+                    //background-color: aqua;
+                    position: relative;
+                    @include consomationGridBetween(430) {
+                        margin-top: 10vw !important;
+                    }
+                    @include consomationGridBetween(568) {
+                        margin-top: 10vw !important;
+                    }
+                    @include consomationGridBetween(768) {
+                        margin-top: 5vw !important;
+                    }
+                    @include consomationGridBetween(992) {
+                        margin-top: 5vw !important;
+                    }
+                    @include consomationGridMax(768) {
+                        width: 80%;
+                        margin: auto;
+                        //height: 15vh;
+                    }
+                    @include consomationGridBetween(992) {
+                        width: 70%;
+                        margin: auto;
+                        //height: 15vh;
+                    }
+                    @include consomationGridBetween(1200) {
+                        width: 70%;
+                        order: 2;
+                        padding: 25px;
+                    }
+                    @include consomationGridMin(1200) {
+                        width: 50%;
+                        order: 2;
+                        padding: 25px;
+                    }
+                    img {
+                        position: absolute;
+                        object-fit: cover;
+                        left: 0;
+                        right: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border-radius: 8px;
+                        @include consomationGridBetween(430) {
+                            height: 15vw;
+                            width: 21vw;
+                            top: -8vw;
+                        }
+                        @include consomationGridBetween(568) {
+                            height: 12vw;
+                            width: 18vw;
+                            top: -8vw;
+                        }
+                        @include consomationGridBetween(768) {
+                            height: 9vw;
+                            width: 14vw;
+                            top: -40px;
+                        }
+                        @include consomationGridBetween(992) {
+                            height: 9vw;
+                            width: 14vw;
+                            top: -40px;
+                        }
+                        @include consomationGridBetween(1200) {
+                            height: 7vw;
+                            width: 10vw;
+                            top: 0;
+                        }
+                        @include consomationGridMin(1200) {
+                            height: 6vw;
+                            width: 8vw;
+                            top: 0;
+                        }
+                    }
+                    svg.line {
+                        width: 100%;
+                        @include consomationGridMax(992) {
+                            //position: absolute;
+                            //bottom: 0;
+                        }
+                    }
+                }
+                .line-break {
+                    height: max-content;
+                    position: relative;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: auto;
+                    @include consomationGridMax(768) {
+                        width: 80%;
+                    }
+                    @include consomationGridBetween(992) {
+                        width: 70%;
+                    }
+                    .airPort {
+                        width: 35%;
+                        word-wrap: break-word;
+                        color: #b69a63;
+                        font-weight: 600;
+                        font-family: $font-sora;
+
+                        @include consomationGridMin(992) {
+                        }
+                        @include consomationGridBetween(430) {
+                            font-size: 3.5vw;
+                        }
+                        @include consomationGridBetween(568) {
+                            font-size: 2.8vw;
+                        }
+                        @include consomationGridBetween(768) {
+                            font-size: 2vw;
+                        }
+                        @include consomationGridBetween(992) {
+                            font-size: 1.7vw;
+                        }
+                    }
+                    .airPort.left {
+                        text-align: start;
+                    }
+                    .airPort.right {
+                        text-align: end;
+                    }
+                }
+                .line-break.large-device {
+                    @include consomationGridMax(992) {
+                        display: none;
+                    }
+                }
+                .line-break.small-device {
+                    @include consomationGridMin(992) {
+                        display: none;
+                    }
+                }
+                .coupon {
+                    font-family: $font-sora;
+                    display: flex;
+                    @include consomationGridBetween(430) {
+                        font-size: 3.5vw;
+                    }
+                    @include consomationGridBetween(568) {
+                        font-size: 2.8vw;
+                    }
+                    @include consomationGridBetween(768) {
+                        font-size: 2vw;
+                    }
+                    @include consomationGridBetween(992) {
+                        font-size: 1.65vw;
+                    }
+                    @include consomationGridBetween(1200) {
+                        font-size: 1.38vw;
+                    }
+                    @include consomationGridMin(1200) {
+                        font-size: 16px;
+                    }
+
+                    @include consomationGridMax(1200) {
+                        flex-direction: column;
+                        justify-content: space-between;
+                    }
+
+                    @include consomationGridMax(568) {
+                        margin-top: 60px;
+                    }
+                    @include consomationGridBetween(768) {
+                        margin-top: 40px;
+                    }
+                    @include consomationGridBetween(992) {
+                        margin-top: 40px;
+                    }
+                    @include consomationGridMax(992) {
+                        order: 3;
+                        width: 100%;
+                    }
+                    @include consomationGridBetween(1200) {
+                        order: 4;
+                        width: 30%;
+                    }
+                    @include consomationGridMin(1200) {
+                        order: 4;
+                        width: 70%;
+                        position: relative;
+                        margin-top: 30px;
+                    }
+                    .consumed {
+                        display: flex;
+                        justify-content: space-between;
+                        @include consomationGridMax(568) {
+                            margin-bottom: 15px;
+                        }
+                        @include consomationGridMin(1200) {
+                            width: 40%;
+                        }
+                        .label {
+                            font-weight: 600;
+                            text-decoration: underline;
+                            color: #b69a63;
+                            svg {
+                                @include consomationGridBetween(430) {
+                                    width: 4vw;
+                                }
+                                @include consomationGridBetween(568) {
+                                    width: 3vw;
+                                }
+                                @include consomationGridBetween(768) {
+                                    width: 3vw;
+                                }
+                                @include consomationGridBetween(992) {
+                                    width: 1.6vw;
+                                }
+                                @include consomationGridBetween(1200) {
+                                    width: 1.38vw;
+                                }
+                                @include consomationGridMin(1200) {
+                                    width: 1vw;
+                                }
+                                margin-right: 1vw;
+                                position: relative;
+                                top: -2px;
+                            }
+                        }
+                        .value {
+                            @include consomationGridMin(1200) {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                    .remaining {
+                        display: flex;
+                        justify-content: space-between;
+                        @include consomationGridBetween(1200) {
+                            position: relative;
+                            bottom: 25px;
+                        }
+                        @include consomationGridMin(1200) {
+                            width: 40%;
+                            margin-left: 10%;
+                        }
+                        .label {
+                            @include consomationGridBetween(430) {
+                                margin-left: 5vw;
+                            }
+                            @include consomationGridBetween(568) {
+                                margin-left: 4vw;
+                            }
+                            @include consomationGridBetween(768) {
+                                margin-left: 4vw;
+                            }
+                            @include consomationGridBetween(992) {
+                                margin-left: 3vw;
+                            }
+                            @include consomationGridMin(1200) {
+                                font-weight: 500;
+                            }
+                        }
+                        @include consomationGridMin(1200) {
+                            .value {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                .conditions {
+                    border-radius: 9px;
+                    background: #fff;
+                    border: 1px solid #d1d1d1;
+                    height: max-content;
+                    @include consomationGridMax(992) {
+                        margin-top: 25px;
+                        padding: 10px;
+                        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+                    }
+                    @include consomationGridBetween(768) {
+                        margin-top: 25px;
+                    }
+                    @include consomationGridBetween(1200) {
+                        order: 4;
+                        width: 35%;
+                        padding: 5px;
+                        margin-left: 5%;
+                    }
+                    @include consomationGridMin(1200) {
+                        order: 3;
+                        width: 25%;
+                        padding: 5px;
+                        //margin-left: 5%;
+                    }
+                    .label {
+                        color: #61374e;
+                        @include consomationGridBetween(430) {
+                            font-size: 4.8vw;
+                        }
+                        @include consomationGridBetween(568) {
+                            font-size: 3.2vw;
+                        }
+                        @include consomationGridBetween(768) {
+                            font-size: 2.2vw;
+                            font-weight: 600;
+                        }
+                        @include consomationGridBetween(992) {
+                            font-size: 1.8vw;
+                            font-weight: 600;
+                        }
+                        @include consomationGridBetween(1200) {
+                            font-size: 1.5vw;
+                            font-weight: 600;
+                        }
+                        @include consomationGridMin(1200) {
+                            font-size: 1.2vw;
+                            font-weight: 600;
+                        }
+                    }
+                    .dayToDeparture {
+                        @include consomationGridMax(568) {
+                            margin-top: 10px;
+                        }
+                        @include consomationGridBetween(768) {
+                            margin-top: 5px;
+                        }
+                        @include consomationGridBetween(992) {
+                            margin-top: 5px;
+                        }
+                        display: flex;
+                        @include consomationGridBetween(1200) {
+                            justify-content: space-between;
+                        }
+                        @include consomationGridMin(1200) {
+                            flex-direction: column;
+                        }
+                        .value {
+                            font-weight: 700;
+                            @include consomationGridBetween(430) {
+                                font-size: 4vw;
+                            }
+                            @include consomationGridBetween(568) {
+                                font-size: 3vw;
+                            }
+                            @include consomationGridBetween(768) {
+                                font-size: 1.85vw;
+                            }
+                            @include consomationGridBetween(992) {
+                                font-size: 1.5vw;
+                            }
+                            @include consomationGridBetween(1200) {
+                                font-size: 1.1vw;
+                            }
+                            @include consomationGridMin(1200) {
+                                font-size: 1vw;
+                            }
+                        }
+                        .d-label {
+                            display: flex;
+                            align-items: center;
+                            @include consomationGridMax(992) {
+                                margin-left: 10%;
+                            }
+                            @include consomationGridBetween(430) {
+                                font-size: 10px;
+                            }
+                            @include consomationGridBetween(568) {
+                                font-size: 12px;
+                            }
+                            @include consomationGridBetween(768) {
+                                font-size: 11px;
+                            }
+                            @include consomationGridBetween(992) {
+                                font-size: 1.4vw;
+                            }
+                            @include consomationGridBetween(1200) {
+                                font-size: 10px;
+                            }
+                            @include consomationGridMin(1200) {
+                                width: 100%;
+                                font-size: 9px;
+                                justify-content: start;
+                            }
+                        }
+                    }
+                    p {
+                        @include consomationGridMax(568) {
+                            margin-top: 10px;
+                        }
+                        @include consomationGridBetween(430) {
+                            font-size: 3vw;
+                            font-weight: 700;
+                        }
+                        @include consomationGridBetween(568) {
+                            font-size: 2.5vw;
+                            font-weight: 700;
+                        }
+                        @include consomationGridBetween(768) {
+                            font-size: 1.9vw;
+                            margin-top: 5px;
+                            padding-bottom: 0 !important;
+                            margin-bottom: 0 !important;
+                            font-weight: 500;
+                        }
+                        @include consomationGridBetween(992) {
+                            font-size: 1.4vw;
+                            margin-top: 5px;
+                            padding-bottom: 0 !important;
+                            margin-bottom: 0 !important;
+                            font-weight: 500;
+                        }
+                        @include consomationGridBetween(1200) {
+                            font-size: 1vw;
+                            font-weight: 500;
+                        }
+                        @include consomationGridMin(1200) {
+                            font-size: 0.8vw;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .action {
+                order: 5;
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include consomationGridMax(992) {
+                    display: none;
+                }
+                @include consomationGridMin(1200) {
+                    margin-top: 30px;
+                }
+                button {
+                    height: max-content;
+                    border-radius: 10px;
+                    background: linear-gradient(#c20831 0%, #f87988 100%);
+                    box-shadow: 0px 2px 26px rgb(168 1 35 / 35%);
+                    color: white;
+                    font-family: $font-sora;
+                    font-weight: 600;
+                    padding: 11px;
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    @include consomationGridBetween(430) {
+    }
+    @include consomationGridBetween(568) {
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
+    @include consomationGridBetween(768) {
+        //margin-left: 6vw;
+        //margin-right: 6vw;
+    }
+}
